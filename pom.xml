@@ -46,10 +46,12 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.33</version> <!-- Spécifie une version -->
+		    <scope>runtime</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -62,6 +64,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+        			<argLine>-javaagent:${settings.localRepository}/org/mockito/mockito-core/4.x.x/mockito-core-4.x.x.jar</argLine> <!-- Remplace par la version de Mockito utilisée -->
+      			</configuration>
 			</plugin>
 		</plugins>
 	</build>
