@@ -1,4 +1,4 @@
-package com.nadhem.produits.etities;
+package com.nadhem.produits.entities;
 
 import java.util.Date;
 
@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Produit {
@@ -17,6 +19,8 @@ public class Produit {
 	private double prix;
 	private Date dateCreation;
 	
+	@ManyToOne
+	private Categorie categorie;
 	
 	public Produit() {
 		super();
@@ -62,6 +66,16 @@ public class Produit {
 	public String toString() {
 		return "Produit [idProduit=" + idProduit + ", nomProduit=" + nomProduit + ", prix=" + prix + ", dateCreation="
 				+ dateCreation + "]";
+	}
+
+
+	public Categorie getCategorie() {
+		return categorie;
+	}
+
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
 	}
 	
 	 

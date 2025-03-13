@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.nadhem.produits.etities.Produit;
+import com.nadhem.produits.entities.Produit;
 import com.nadhem.produits.repos.ProduitRepository;
 
 @Service

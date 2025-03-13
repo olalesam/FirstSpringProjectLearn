@@ -2,7 +2,7 @@ package com.nadhem.produits.services;
 
 import java.util.List;
 
-import com.nadhem.produits.etities.Produit;
+import com.nadhem.produits.entities.Produit;
 
 public interface ProduitService {
 	
