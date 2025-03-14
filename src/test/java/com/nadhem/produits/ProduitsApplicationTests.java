@@ -53,6 +53,26 @@ class ProduitsApplicationTests {
 		for (Produit p:prods) {
 			System.out.println(p);
 		}
+	}
+	
+	@Test 
+	public void testFindNomProduit() 
+	{ 
+		List<Produit> prods = produitRepository.findByNomProduit("PC Intell");     
+		
+		for (Produit p:prods) {
+			System.out.println(p);
+		} 
+	}
+	
+	@Test 
+	public void testFindNomProduitContains() 
+	{ 
+		List<Produit> prods = produitRepository.findByNomProduitContains("P");     
+		
+		for (Produit p:prods) {
+			System.out.println(p);
+		} 
 	} 
 
 

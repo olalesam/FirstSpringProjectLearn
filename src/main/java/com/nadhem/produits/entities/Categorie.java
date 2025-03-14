@@ -7,7 +7,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Categorie {
 	
@@ -17,7 +23,7 @@ public class Categorie {
 	private String nomCat;
 	private String descriptionCat;
 	
-	@OneToMany(mappedBy = "categorie")  // donné le nom de l'attribut de type catégorie dans la classe produit
+	@OneToMany(mappedBy = "categorie")  
 	private List<Produit> produits;
 	
 	
