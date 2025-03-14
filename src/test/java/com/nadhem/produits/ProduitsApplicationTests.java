@@ -74,6 +74,17 @@ class ProduitsApplicationTests {
 			System.out.println(p);
 		} 
 	} 
+	
+	@Test
+	public void testfindByNomPrix()
+	{
+		List<Produit> prods = produitRepository.findByNomPrix("PC Intell", 1000.0);
+		for (Produit p : prods)
+		{
+			System.out.println(p);
+		}
+	}
+
 
 
 }
