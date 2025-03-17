@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.nadhem.produits.entities.Categorie;
 import com.nadhem.produits.entities.Produit;
 import com.nadhem.produits.repos.ProduitRepository;
 
@@ -83,6 +84,18 @@ class ProduitsApplicationTests {
 		{
 			System.out.println(p);
 		}
+	}
+	
+	@Test 
+	public void testfindByCategorie() 
+	{ 
+		Categorie cat = new Categorie(); 
+		cat.setIdCat(1L);    
+		List<Produit>  prods = produitRepository.findByCategorie(cat); 
+		for (Produit p : prods) 
+		{ 
+			System.out.println(p); 
+		} 
 	}
 
 
