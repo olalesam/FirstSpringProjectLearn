@@ -36,4 +36,10 @@ public class ProduitRestController {
 		return produitService.saveProduit(produit);
 	}
 	
+	@RequestMapping(method = RequestMethod.PUT) 
+	public Produit updateProduit(@RequestBody Produit produit) { 
+		return produitService.updateProduit(produit); 
+	} 
+	
+	
 }
