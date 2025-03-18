@@ -41,5 +41,10 @@ public class ProduitRestController {
 		return produitService.updateProduit(produit); 
 	} 
 	
+	@RequestMapping(value="/{id}",method = RequestMethod.DELETE) 
+	public void deleteProduit(@PathVariable("id") Long id) 
+	{ 
+		produitService.deleteProduitById(id); 
+	} 
 	
 }
