@@ -36,3 +36,14 @@ public interface ProduitRepository extends JpaRepository<Produit, Long > {
 
 }
 
+//Méthode GET : 
+//• http://localhost:8080/produits/rest 
+//• http://localhost:8080/produits/rest/2 
+//• http://localhost:8080/produits/rest?size=2&page=0 
+//• http://localhost:8080/produits/rest?size=2&page=1 
+//• http://localhost:8080/produits/rest?sort=nomProduit,desc 
+//• http://localhost:8080/produits/rest?size=2&page=0&sort=prixProduit,desc 
+//• http://localhost:8080/produits/rest/search 
+//• http://localhost:8080/produits/rest/search/findByNomProduitContains?nom=PC 
+//• http://localhost:8080/produits/rest/search/findByCategorieIdCat?id=1 
+
